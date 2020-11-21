@@ -1,4 +1,4 @@
-public class _93_Union_Intersection_Simple {
+public class _92_Union_Intersection_Simple {
 
     static Node createList(int... data) {
         Node head = new Node(data[0]);
