@@ -25,7 +25,7 @@ public class _98_InsertAfterNthFromEnd {
         return head;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         Node head = createList(10, 8, 3, 12, 5, 18);
         Node head2 = createList(1, 3, 4, 5);

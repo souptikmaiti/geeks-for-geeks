@@ -25,7 +25,7 @@ public class _101_MakeMiddleNodeHead {
         return head;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         Node head1 = createList(1, 2, 3, 4, 5);
         Node head2 = createList(1, 2, 3, 4, 5, 6);

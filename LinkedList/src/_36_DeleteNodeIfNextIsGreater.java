@@ -17,7 +17,7 @@ public class _36_DeleteNodeIfNextIsGreater {
         System.out.println();
     }
 
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         //12->15->10->11->5->6->2->3
         Node head = new Node(12);

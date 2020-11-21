@@ -23,7 +23,7 @@ public class _43_Sort_0_1_2_s {
         return head;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         //1 -> 1 -> 2 -> 0 -> 2 -> 0 -> 1 -> NULL
         Node head = new Node(1);

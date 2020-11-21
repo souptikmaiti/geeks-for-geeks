@@ -24,7 +24,7 @@ public class _42_Add2LinkedListUsingRecursion {
         return head;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         Node head1 = new Node(3);
         addNode(head1, 8);

@@ -26,7 +26,7 @@ public class _41_FlatenModifiedList {
         System.out.println();
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         /* Let us create the following linked list
             5 -> 10 -> 19 -> 28
             |    |     |     |

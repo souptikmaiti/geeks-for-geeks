@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class _3_Missing_Chars_In_Alphabet {
+public class _3_Missing_Chars_In_Alphabet_or_Pangram {
 
     public static void main(String[] args) {
         String str1 = "The Quick Brown Fox Jumps Over the Lazy Dog";

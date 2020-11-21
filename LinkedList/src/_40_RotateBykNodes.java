@@ -17,7 +17,7 @@ public class _40_RotateBykNodes {
         System.out.println();
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         //10->20->30->40->50->60
         Node head = new Node(10);

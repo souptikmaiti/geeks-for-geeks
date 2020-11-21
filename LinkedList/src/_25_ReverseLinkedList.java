@@ -17,7 +17,7 @@ public class _25_ReverseLinkedList {
         System.out.println();
     }
 
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         Node head = new Node(1);
         addNode(head, 2);

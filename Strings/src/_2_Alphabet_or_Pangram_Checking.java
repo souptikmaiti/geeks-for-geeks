@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class _2_Alphabet_Checking {
+public class _2_Alphabet_or_Pangram_Checking {
 
     public static void main(String[] args) {
         String str1 = "The Quick Brown Fox Jumps Over the Lazy Dog";

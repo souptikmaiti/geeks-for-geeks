@@ -17,7 +17,7 @@ public class _39_TripletsForGivenSum {
         System.out.println();
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         //100->15->5->20
         Node a = new Node(100);

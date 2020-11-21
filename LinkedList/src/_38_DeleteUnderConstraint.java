@@ -18,7 +18,7 @@ public class _38_DeleteUnderConstraint {
         System.out.println();
     }
 
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         Node head = new Node(5);
         Node n1 = addNode(head, 6);

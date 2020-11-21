@@ -33,7 +33,7 @@ public class _93_Union_Intersection_Using_MergeSort {
         t.next = newNode;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         Node head1 = createList(5, 22, 3, 3, 3, 3, 10, 7, 7, 9, 28, 28, 28, 22, 22, 22);
         Node head2 = createList(3, 3, 3, 4, 7, 7, 7, 7, 8, 10);

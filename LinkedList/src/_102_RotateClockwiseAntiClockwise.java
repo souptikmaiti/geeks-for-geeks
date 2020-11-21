@@ -25,7 +25,7 @@ public class _102_RotateClockwiseAntiClockwise {
         return head;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         Node head = createList(1, 2, 3, 4, 5);
         Node head2 = createList(1, 2, 3, 4, 5, 6);

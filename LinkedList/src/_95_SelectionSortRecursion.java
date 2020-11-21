@@ -25,7 +25,7 @@ public class _95_SelectionSortRecursion {
         return head;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         Node head1 = createList(10 ,  12 ,  8 ,  4 ,  6);
         Node head2 = createList(40, 20, 60, 10, 50, 30);

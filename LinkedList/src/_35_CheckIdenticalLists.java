@@ -17,7 +17,7 @@ public class _35_CheckIdenticalLists {
         System.out.println();
     }
 
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         Node head1 = new Node(1);
         addNode(head1, 2);

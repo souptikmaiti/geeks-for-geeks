@@ -36,7 +36,7 @@ public class _94_Union_Intersection {
         t.next = newNode;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         Node head1 = createList(1 , 2 , 3 , 4);
         Node head2 = createList(3 , 4 , 8 , 10);

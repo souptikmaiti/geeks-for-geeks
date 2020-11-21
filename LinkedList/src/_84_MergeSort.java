@@ -36,7 +36,7 @@ public class _84_MergeSort {
         t.next = newNode;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         Node head1 = createList(5 , 22 , 3 , 10, 7, 7, 7, 7, 7, 12, 9);
         Node head2 = createList(3 , 4 , 8 , 10);

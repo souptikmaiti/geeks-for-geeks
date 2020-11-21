@@ -25,7 +25,7 @@ public class _96_InsertAtMiddle {
         return head;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         Node head = createList(1, 2, 4, 5);
         Node head2 = createList(5, 10, 4, 32, 16);

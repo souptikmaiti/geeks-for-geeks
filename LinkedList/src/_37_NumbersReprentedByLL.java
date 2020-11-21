@@ -18,7 +18,7 @@ public class _37_NumbersReprentedByLL {
         System.out.println();
     }
 
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         Node head1 = new Node(5);
         addNode(head1, 6);

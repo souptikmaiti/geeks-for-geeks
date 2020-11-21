@@ -25,7 +25,7 @@ public class _100_CountRotationsInSortedList {
         return head;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
 
         Node head = createList(15, 18, 5, 8, 11, 12);
 
