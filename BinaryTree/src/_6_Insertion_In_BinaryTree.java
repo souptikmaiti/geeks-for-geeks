@@ -16,6 +16,10 @@ public class _6_Insertion_In_BinaryTree {
         Node root = new Node(10);
         insertNode(root, 11);
         insertNode(root, 9);
+        insertNode(root, 7);
+        insertNode(root, 12);
+        insertNode(root, 15);
+        insertNode(root, 8);
 
         inorderPrinting(root);
     }
