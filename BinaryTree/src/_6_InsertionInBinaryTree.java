@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class _6_Insertion_In_BinaryTree {
+public class _6_InsertionInBinaryTree {
 
     public static void inorderPrinting(Node tree) {
         if (tree == null)

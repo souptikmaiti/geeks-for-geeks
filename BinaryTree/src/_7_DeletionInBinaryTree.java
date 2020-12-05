@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class _7_Deletion_In_BinaryTree {
+public class _7_DeletionInBinaryTree {
 
     static void inorderPrinting(Node tree) {
         if (tree == null)
@@ -45,19 +45,14 @@ public class _7_Deletion_In_BinaryTree {
 
         inorderPrinting(root);
         System.out.println("");
-        deleteNode(root, 12);
+        exchangeDataWithDeepestNodeAndDeleteDeepestNode(root, 19);
         inorderPrinting(root);
     }
 
-    static void deleteNode(Node root, int x) {
-        Node deepestRight = exchangeDataWithDeepestNode(root, x);
-        deleteDeepestNode(root, deepestRight);
-    }
-
-    static Node exchangeDataWithDeepestNode(Node root, int x) {
+    static void exchangeDataWithDeepestNodeAndDeleteDeepestNode(Node root, int x) {
         Queue<Node> q = new LinkedList<>();
         q.add(root);
-        Node tmp = null, delNode = null;
+        Node tmp = null, delNode = null, leafParent = null;
 
         while (!q.isEmpty()) {
             tmp = q.poll();
@@ -66,35 +61,15 @@ public class _7_Deletion_In_BinaryTree {
 
             if (tmp.left != null)
                 q.add(tmp.left);
-            if (tmp.right != null)
+            if (tmp.right != null) {
+                leafParent = tmp;
                 q.add(tmp.right);
+            }
         }
 
         if (delNode != null)
             delNode.data = tmp.data;
-        return tmp;
-    }
-
-    static void deleteDeepestNode(Node root, Node del) {
-        Queue<Node> q = new LinkedList<>();
-        q.add(root);
-        while (!q.isEmpty()) {
-            Node tmp = q.poll();
-            if (tmp.left != null) {
-                if (tmp.left == del) {
-                    tmp.left = null;
-                    return;
-                }
-                q.add(tmp.left);
-            }
-
-            if (tmp.right != null) {
-                if (tmp.right == del) {
-                    tmp.right = null;
-                    return;
-                }
-                q.add(tmp.right);
-            }
-        }
+        if (leafParent != null)
+            leafParent.right = null;
     }
 }
