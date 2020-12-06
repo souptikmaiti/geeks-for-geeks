@@ -16,8 +16,8 @@ public class _3_SubsetSumProblem {
     }
 
     public static boolean findSubset(int[] ar, int n, int sum) {
-        if (n == 0)
-            return false;
+        if (sum == 0) return true;
+        if (n == 0 && sum > 0) return false;
 
         if (t[n][sum] != -1) return t[n][sum] == 1;
 
