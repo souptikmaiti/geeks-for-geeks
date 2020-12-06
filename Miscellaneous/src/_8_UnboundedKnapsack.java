@@ -2,7 +2,8 @@ import java.util.Arrays;
 
 // Problem Statement: Given a bag with maximum capacity and list of items with their weight and value.
 // Need to put optimum no. of items in the bag so that value is maximum.
-public class _2_01Knapsack {
+// Multiple occurrences of same item allowed
+public class _8_UnboundedKnapsack {
     static int[][] t;
 
     public static void main(String[] args) {
@@ -20,8 +21,9 @@ public class _2_01Knapsack {
         System.out.println(knapsackDynamic(wt, value, n, capacity));
     }
 
-    // Recursion with memoization same time complexity as dynamic version
-    // Here whether we choose/reject nth item it got processed and we look for rest (n-1) items
+    // Difference from 0-1 knapsack
+    // If we reject nth item then it got processed, we will look for rest (n-1) elements
+    // But if we choose nth item it is not processed as we can choose it again. So we will look for n elements again
     public static int knapsack(int[] wt, int[] value, int n, int capacity) {
         if (n == 0 || capacity == 0)
             return 0;
@@ -30,10 +32,10 @@ public class _2_01Knapsack {
             return t[n][capacity];
 
         if (wt[n-1] <= capacity) {
-            return t[n][capacity] = Math.max(value[n - 1] + knapsack(wt, value, n - 1, capacity - wt[n - 1]), // we choose the item
-                    knapsack(wt, value, n - 1, capacity));  // we reject the item
+            return t[n][capacity] = Math.max(value[n - 1] + knapsack(wt, value, n, capacity - wt[n - 1]), // we choose the item but it is not processed as we can select it again
+                    knapsack(wt, value, n - 1, capacity));  // we reject the item so it is processed
         } else {
-            return t[n][capacity] = knapsack(wt, value, n - 1, capacity);  // we reject the item as its weight is more than capacity
+            return t[n][capacity] = knapsack(wt, value, n - 1, capacity);  // we reject the item as its weight is more than capacity and so it is processed
         }
     }
 
@@ -50,7 +52,7 @@ public class _2_01Knapsack {
         for (int i = 1; i < n + 1; i++)
             for (int j = 1; j < capacity + 1; j ++) {
                 if (wt[i - 1] <= j)
-                    dc[i][j] = Math.max((value[i-1] + dc[i-1][j-wt[i-1]]), dc[i-1][j]);
+                    dc[i][j] = Math.max((value[i-1] + dc[i][j-wt[i-1]]), dc[i-1][j]);
                 else
                     dc[i][j] = dc[i-1][j];
             }
