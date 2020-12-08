@@ -1,18 +1,20 @@
-// example: s1 = "heap", s2 = "pea", to convert a to b, we need to delete h and p from s1 and insert p to s1 at the beginning
-// no. of deletion = 2 and no of insertion = 1
-// s1 -> lcs -> s2
-public class _16_MinimumDeletionInsertionToConvertAtoB {
+// example: s1 = "agbcba", palindromic subsequences = {aba, bcb, aa, bb, a, b, c, g, abba, abcba}
+// longest is abcba... ans = len(abcba) = 5
+public class _17_LongestPalindromicSubsequence {
 
     public static void main(String[] args) {
-        String s1 = "heap";
-        String s2 = "pea";
-        int n1 = s1.length();
-        int n2 = s2.length();
+        String s1 = "agbcba";
+        String s2 = findReverse(s1);
+        int n = s1.length();
 
-        int lcs = lcsDynamic(s1, n1, s2, n2);
+        System.out.println("Longest Common Subsequence: " + lcsDynamic(s1, n, s2, n));
+    }
 
-        System.out.println("No. of deletion: " + (n1 - lcs));
-        System.out.println("No. of Insertion: " + (n2 - lcs));
+    public static String findReverse(String s) {
+        String r = "";
+        for (int i=s.length() - 1; i>=0; i--)
+            r += s.charAt(i);
+        return r;
     }
 
     public static int lcsDynamic(String s1, int n1, String s2, int n2) {
@@ -30,6 +32,7 @@ public class _16_MinimumDeletionInsertionToConvertAtoB {
                     dc[i][j] = 1 + dc[i - 1][j - 1];
                 else
                     dc[i][j] = Math.max(dc[i-1][j], dc[i][j-1]);
+
             }
         }
         return dc[n1][n2];
