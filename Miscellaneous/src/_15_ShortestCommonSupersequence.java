@@ -21,8 +21,7 @@ public class _15_ShortestCommonSupersequence {
 
         for (int j = 0; j < n2 + 1; j++)
             dc[0][j] = 0;
-        
-        int max = 0;
+
         for (int i = 1; i < n1 + 1; i++) {
             for (int j = 1; j < n2 + 1; j++) {
                 if (s1.charAt(i - 1) == s2.charAt(j - 1))
@@ -30,7 +29,6 @@ public class _15_ShortestCommonSupersequence {
                 else
                     dc[i][j] = Math.max(dc[i-1][j], dc[i][j-1]);
 
-                max = Math.max(max, dc[i][j]);
             }
         }
         return dc[n1][n2];
