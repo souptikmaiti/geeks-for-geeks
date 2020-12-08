@@ -22,7 +22,7 @@ public class _13_LongestCommonSubstring {
 
         for (int j = 0; j < n2 + 1; j++)
             dc[0][j] = 0;
-        
+
         int max = 0;
         for (int i = 1; i < n1 + 1; i++) {
             for (int j = 1; j < n2 + 1; j++) {
