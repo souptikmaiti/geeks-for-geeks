@@ -1,34 +1,22 @@
 import java.util.Stack;
 
-public class _1_NearestGreaterToRight {
+public class _2_NearestGreaterToLeft {
 
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 3, 0, 0, 1, 2, 4, 3};
+        int[] arr = new int[]{1, 3, 0, 0, 1, 2, 4, 1};
         int n = arr.length;
-        int[] res = nearestLargerToRight(arr);
-
-        /* brute force O(n^2)
-        int[] res = new int[n];
-        for (int i = 0; i < n ; i++) {
-            res[i] = -1;
-            for (int j = i + 1; j < n; j++) {  // j dependent on i therefore scope of stack
-                if (arr[i] < arr[j]) {
-                    res[i] = arr[j];
-                    break;
-                }
-            }
-        }*/
+        int[] res = nearestLargerToLeft(arr);
 
         printArray(res);
     }
 
-    private static int[] nearestLargerToRight(int[] arr) {
+    private static int[] nearestLargerToLeft(int[] arr) {
         int n = arr.length;
         int[] res = new int[n];
 
         Stack<Integer> stack = new Stack<>();
 
-        for (int i = n - 1; i >= 0; i--) {
+        for (int i = 0; i < n; i++) {
             while (!stack.isEmpty() && stack.peek() <= arr[i])
                 stack.pop();
 
