@@ -1,7 +1,6 @@
 import java.util.Stack;
 
 public class ReverseStackWithoutExtraSpace {
-
     static void printStackTopDown(Stack<Integer> stack) {
         if (stack.empty()) return;
         int tmp = stack.pop();
